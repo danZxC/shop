@@ -1,20 +1,52 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import ProductPage from '../views/ProductPage.vue'
+import GamePage from '../views/GamePage.vue'
+import MainPage from '../views/MainPage.vue'
+import ProductLaptop from '@/components/productPage/ProductLaptop.vue'
+import ProductPc from '@/components/productPage/ProductPc.vue'
+import ProductAccesories from '@/components/productPage/ProductAccesories.vue'
+import ProductPhones from '@/components/productPage/ProductPhones.vue'
+
+
+
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'main',
+    component: MainPage
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+    path: '/product',
+    name: 'Product',
+    component: ProductPage
+  },
+  {
+    path: '/game',
+    name: 'Game',
+    component: GamePage
+  },
+  {
+    path: '/product/laptops',
+    name: 'Laptops',
+    component: ProductLaptop
+  },
+  {
+    path: '/product/Pc',
+    name: 'Pc',
+    component: ProductPc
+  },  
+  {
+    path: '/product/Accesories',
+    name: 'Accesories',
+    component: ProductAccesories
+  },
+  {
+    path: '/product/Phones',
+    name: 'Phones',
+    component: ProductPhones
+  },
+
 ]
 
 const router = createRouter({

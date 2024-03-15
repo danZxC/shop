@@ -1,30 +1,87 @@
+
+
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+<HeaderControl/>
 </template>
 
+
+<script>
+import HeaderControl from './components/HeaderControl.vue'
+export default {
+components:{
+  HeaderControl
+}
+}
+</script>
+
 <style>
+a{
+  text-decoration: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@600&family=Nunito&display=swap');
+* {
+  margin:0;
+  padding: 0;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Nunito', sans-serif;
+
+  margin:0;
+  padding:0;
+  font-family: 'Nunito';
+}
+
+h1 {
+  color: #860086;
+  text-transform: uppercase;
+  font-size: calc(35px + 16 * (100vw / 1920));
+ 
+  font-weight: 600;
+  font-family: 'Exo';
   text-align: center;
-  color: #2c3e50;
+  margin-top:160px;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  height: 80svh;
+  margin:0 auto;
 }
 
-nav {
-  padding: 30px;
-}
+input {
+    width: 80%;
+    height: 80px;
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+    color:#959595;
+    font-size: 25px;
+    font-family: 'Nunito';
+    font-weight: 300;
+    padding-left: 40px;
+    box-sizing: border-box;
+    -webkit-box-shadow: 10px 11px 33px 2px rgba(34, 60, 80, 0.38);
+    -moz-box-shadow: 10px 11px 33px 2px rgba(34, 60, 80, 0.38);
+    box-shadow: 10px 11px 33px 2px rgba(34, 60, 80, 0.38);
+    border:0;
+    border-radius: 20px;
 }
-
-nav a.router-link-exact-active {
-  color: #42b983;
+button {
+    width: 50%;
+    background-color: #861285;
+    height: 90px;
+    color:white;
+    border: 0;
+    border-radius: 20px;
+    
+  font-size: calc(20px + 16 * (100vw / 1920));
+    font-weight: 600;
+    font-family: 'Exo';
+}
+button:hover{
+  cursor: pointer;
 }
 </style>
