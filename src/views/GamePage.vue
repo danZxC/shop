@@ -11,8 +11,9 @@
             
         </div>
     </div>
-    <div class="buttons">        
+    <div class="buttons">       
         <div class="button" v-for="button in buttons" :key="button.id">
+            
             <GameButton @click="IncreaseQuantity(button.id)" @get="UpdatePassiveIncome" :title=button.title :imgSrc=button.imgSrc :quantity=button.quantity :price=button.price :amount="button.amount"/>
         </div>
     </div>
@@ -116,12 +117,25 @@ export default {
             this.passiveIncome = JSON.parse(localStorage.getItem("passiveIncome"))
             this.assendCoeficient = JSON.parse(localStorage.getItem("assend"))
             this.buttons = JSON.parse(localStorage.getItem("buttons"))
-            this.back    = JSON.parse(localStorage.getItem("level"))
+        },
+        CheckAll(){
+            if(this.passiveIncome === null || this.assendCoeficient === null || this.buttons === null ){
+                this.passiveIncome = 0
+                this.assendCoeficient = 1
+                this.buttons = [
+                    {title: "Plata", imgSrc: require('../assets/chip.png'), amount: 1, quantity:0, price:10, id:0},
+                    {title: "Processor", imgSrc: require('../assets/cpu.png'), amount: 2, quantity:0, price:100, id:1},
+                    {title: "Screen", imgSrc: require('../assets/monitor.png'), amount: 3, quantity:0, price:150, id:2}
+                ]
+                this.SaveAll()
+            }
         }
 
     },
     mounted(){
+
         this.LoadAll()
+        this.CheckAll()
         console.log(this.buttons)
         setInterval(this.UpdateCounterPassive, 2000)            
     }
@@ -145,7 +159,7 @@ export default {
     color: white;
 }
 img{
-    width: 40%;
+    width: 30%;
 }
 img:hover{
     cursor: pointer;

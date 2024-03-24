@@ -50,4 +50,11 @@ p{
     width: 70%;
     text-align: center;
 }
+@media(max-width:768px){
+    .wrapper{
+        width: 100%;
+        height: 30svh;
+        
+    }
+}
 </style>

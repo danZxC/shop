@@ -14,7 +14,10 @@
             <img src="../../assets/vk.png" alt="">
    </div>
     </div>
-    <img class="main-img" src="../../assets/картинка.png" alt="">
+    <div class="main-img">
+        <img class="image" src="../../assets/картинка.png" alt="">
+    </div>
+    
   </div>
   </div>
  
@@ -30,23 +33,41 @@
     background-size: cover;
 }
 
-
 .cta {
+    
+    height: 80%;
      width: 45%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
 }
 h1{
     color: #FFD6FF;
     font-family: 'Exo', sans-serif;
-    
+    margin-top:0;
     font-size: calc(35px + 16 * (100vw / 1920));
     font-weight: 600;
     text-align: left;
-    margin-top: 140px;
 }
 .main-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 40%;
-    margin-top: 100px;
+    height: 90%;
+    margin-top:200px;
 }
+.image{
+    width: 100%;
+}
+.cta-title{
+   width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 70%;
+}
+
 
 h2 {
     color: #9468A0;
@@ -58,9 +79,8 @@ h2 {
 }
 
 p {
-    font-size: calc(15px + 16 * (100vw / 1920));
+    font-size: calc(10px + 16 * (100vw / 1920));
     color:white;
-    margin: 50px 0; 
 }
 
 button {
@@ -84,10 +104,104 @@ button {
 .cta-title {
     margin-bottom: 80px;
 }
-@media(max-width: 1600px){
-h1{
-    margin-top: 5%;
+.cta{
+    margin-top:200px;
 }
+
+@media(max-width: 1024px) and (min-height:800px){
+    .wrapper {
+        flex-direction: column;
+        text-align: center;
+
+    }
+    .cta {
+        width: 100%;
+        margin-top: 100px;
+    }
+    .cta-title {
+        height: 60vh;
+    }
+    .networks {
+        height: 50px;
+        width: 100%;
+    }
+    .networks img {
+        width: 50px;
+    }
+    .cta-title p {
+        margin: 0;
+    }
+    h1{
+        margin-top: 60px;
+        text-align: center;
+
+    }
+    .back-wrapper {
+        height: 180vh;
+    }
+    .main-img {
+        width: 80%;
+    }
+}
+@media(max-width:1024px){
+    .main-img{
+        width: 100%;
+        height: 70%;
+    }
+    .cta{
+        height: 60vh;
+    }
+}
+@media(max-width:768px){
+    
+    .wrapper {
+        flex-direction: column;
+        text-align: center;
+        height: 150vh;
+    }
+    .cta {
+        width: 100%;
+        height: 80vh;
+        margin-top:100px;   
+    }
+    button {
+        height: 100px;
+    }
+    .cta-title {
+        height: 60vh;
+    }
+    .networks {
+        height: 50px;
+        width: 100%;
+    }
+    .networks img {
+        width: 50px;
+    }
+    .cta-title p {
+        margin: 0;
+    }
+    h1{
+        margin-top: 60px;
+        text-align: center;
+
+    }
+    .back-wrapper {
+        height: 190vh;
+    }
+    .main-img {
+        width: 90%;
+        margin-top:100px;
+    }
+}
+
+
+@media (max-width: 500px){
+    .main-img{
+        width: 100%;
+
+    }
+    .back-wrapper{
+        height: 150vh;
+    }
 }
 </style>
-

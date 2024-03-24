@@ -90,7 +90,11 @@ export default {
      
     },
     mounted(){    
+        
         this.laptopArray = JSON.parse(localStorage.getItem('laptops'))
+        if(this.laptopArray === null){
+            this.laptopArray = []
+        }
         console.log(this.laptopArray)
     },
     components: { CardProduct }
@@ -192,4 +196,3 @@ export default {
     }
 
 </style>
-./Card.vue

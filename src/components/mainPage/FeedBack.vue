@@ -15,7 +15,6 @@
 
 
 <script>
-import axios from 'axios';
 
 export default {
     data(){
@@ -25,41 +24,6 @@ export default {
             email:"",
         }
     },
-    methods: {
-    sendEmail() {
-      axios.post('https://api.sendgrid.com/v3/mail/send', {
-        personalizations: [
-          {
-            to: [
-              {
-                email: 'madbeaver151@gmail.com'
-              }
-            ],
-            subject: 'Новый комментарий',
-          }
-        ],
-        from: {
-          email: this.email,
-        },
-        content: [
-          {
-            type: 'text/plain',
-            value: this.comment,
-          }
-        ]
-      }, {
-        headers: {
-          'Authorization': 'Bearer YOUR_SENDGRID_API_KEY'
-        }
-      })
-      .then(response => {
-        console.log('Письмо успешно отправлено',response);
-      })
-      .catch(error => {
-        console.error('Ошибка при отправке письма', error);
-      });
-    }
-    }
 }
 </script>
 
@@ -68,7 +32,7 @@ export default {
     flex-direction: column;
     align-items: center;
     height: 100svh;
-    
+    text-align: center;
     margin-bottom: 160px;
 }
 h2 {
@@ -87,5 +51,14 @@ form{
 }
 input {
   height: 20%;  
+}
+
+@media(max-width:768px){
+  form{
+    width: 100%;
+  }
+  button{
+    width: 100%;
+  }
 }
 </style>

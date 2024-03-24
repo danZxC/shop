@@ -35,7 +35,7 @@ export default {
     data() {
         return {
             showButton: false,
-            PcArray: [],
+            PcArray: [{}],
             product: {
                 name: "",
                 price: "",
@@ -64,7 +64,8 @@ export default {
             location.reload()
        },
        updateList(){
-              if(!isNaN(this.product.price) && !isNaN(this.product.quantity) && this.product.name!='' && this.product.description!='' && this.product.price!='' && this.product.quantity!=''){
+            
+                if(!isNaN(this.product.price) && !isNaN(this.product.quantity) && this.product.name!='' && this.product.description!='' && this.product.price!='' && this.product.quantity!=''){
                 this.PcArray.push(
                 {
                     name: this.product.name,
@@ -77,7 +78,7 @@ export default {
                 })
                 localStorage.setItem('Pc',JSON.stringify(this.PcArray))
                 alert("Новый элемент зарегистрирован!")
-                location.reload()
+                // location.reload()
             }
             if(isNaN(this.product.price)){alert("The price should contain only numbers")}
             if(isNaN(this.product.quantity)){alert("The quantity should contain only numbers")}
@@ -89,9 +90,11 @@ export default {
         },   
      
     },
-    mounted(){    
+    mounted(){  
         this.PcArray = JSON.parse(localStorage.getItem('Pc'))
-        
+        if(this.PcArray===null){  
+            this.PcArray = []
+        }
         console.log(this.PcArray)
     },
     components: { CardProduct }

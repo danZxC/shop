@@ -60,4 +60,17 @@ a {
 a:visited{
     color:black;
 }
+
+@media (max-width:768px){
+    .column {
+        width: 100%;
+    }
+    .wrapper {
+        gap:20px;
+    }
+    .block1,.block2,.block3,.block4 {
+        height: 48%;
+    }
+    
+}
 </style>

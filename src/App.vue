@@ -84,4 +84,14 @@ button {
 button:hover{
   cursor: pointer;
 }
+
+@media(max-width:768px){
+  input{
+    
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 0.17);
+    -moz-box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 0.17);
+    box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 0.17);
+  }
+}
 </style>

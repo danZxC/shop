@@ -1,6 +1,6 @@
 <template>
     <header>
-        <img src="../assets/shop-logo.png" alt="">
+        <img src="../../assets/shop-logo.png" alt="">
         <div class="burger">
             <div class="burger-lines" :class = "{active: isActive}"  @click="OpenMenu">
                 
@@ -8,7 +8,7 @@
             <div class="burger-line"></div>
             <div class="burger-line"></div>
             </div>
-            <nav>
+            <nav :class = "{active: isActive}">
             <router-link to = '/'>Main</router-link>
             <router-link :to = "{name: 'Product'}">Product</router-link>
             <router-link :to = "{ name: 'Game'}">Game</router-link>
@@ -19,19 +19,18 @@
     <RouterView/>
 </template>
 
-<style scoped>
+<style>
 .burger {
     width: 40%;
 }
 header{
-    padding: 10px 0px;
+    padding: 40px 0px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     background-color: #29003B;
-    position: fixed;
-    top:0;
+    position: static;
 }
 nav { 
     width: 100%;
@@ -48,7 +47,7 @@ nav {
     width: 30px;
     height: 20px;
 }
-.burger-line {  
+.burger-line {
     width: 100%;
     height: 10%;
     background-color: white;
@@ -56,7 +55,7 @@ nav {
 }
 
 nav a {
-    padding: 10px 30px;
+    padding: 20px 30px;
     color: white;
     box-sizing: border-box;
     border-radius: 10px;
@@ -77,12 +76,8 @@ nav a:hover{
 }
 
 @media (max-width:768px){
-
     header{
         padding: 20px 0 ;
-    }
-    header img {
-        width: 40%;
     }
     .burger {
         width: 50px;
@@ -115,22 +110,6 @@ nav a:hover{
     .wrapper {
         flex-direction: column-reverse;
     }
-    .burger-lines.active{
-        justify-content: center;
-        align-items: center;
-    }
-    .burger-line:first-child.active{
-        transform: rotate(45deg);
-        transition: 500ms;
-        
-    }
-    .burger-line:last-child.active{
-        transform: rotate(-45deg);
-        transition: 500ms;
-    }
-    .burger-line:nth-child(2).active{
-        display: none;
-    }
     nav.active{
         z-index:100;    
         width: 100%;
@@ -149,13 +128,9 @@ nav a:hover{
     }
     .router-link-exact-active {
         color:#E3C7E9;
-    } 
-}
-
-@media (max-width:800px) and (min-height:1000px){
-    .nav.active{
-        margin-top:50px;
     }
+    
+    
 }
 
 
@@ -170,14 +145,7 @@ export default {
     },
     methods:{
         OpenMenu(){
-            let menu = document.querySelector("nav")
-            let burgerLines = document.querySelectorAll(".burger-line")
-            let burger = document.querySelector(".burger-lines")
-            menu.classList.toggle("active")
-            for(let i=0;i<burgerLines.length;i++){
-                burgerLines[i].classList.toggle("active")
-            }
-            burger.classList.toggle("active")
+            this.isActive=!this.isActive
         }
     }
 }

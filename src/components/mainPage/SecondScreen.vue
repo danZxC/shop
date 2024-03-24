@@ -25,6 +25,16 @@
     height: 45%;
     background-color: #fff;
 }
+@media(max-width:768px){
+    .block-row {
+        flex-direction: column;
+        height: 50%;
+    }
+    .wrapper{
+        height: 150vh;
+    }
+
+}
 </style>
 
 <script>

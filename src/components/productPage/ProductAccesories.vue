@@ -91,6 +91,9 @@ export default {
     },
     mounted(){    
         this.AccesoriesArray = JSON.parse(localStorage.getItem('accesories'))
+        if(this.AccesoriesArray === null){
+            this.AccesoriesArray = []
+        }
         console.log(this.AccesoriesArray)
     },
     components: { CardProduct }

@@ -90,6 +90,9 @@ export default {
     mounted(){    
        
         this.phoneArray = JSON.parse(localStorage.getItem('phones'))
+        if(this.phoneArray === null) {
+            this.phoneArray = []
+        }
         console.log(this.phoneArray)
     },
     components: { CardProduct }
