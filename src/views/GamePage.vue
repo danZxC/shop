@@ -227,12 +227,17 @@ export default {
             this.UpgradeInfo[2].price = JSON.parse(localStorage.getItem("AddButtonIncreasePrice"))
         },
         CheckAll(){
-            if(this.passiveIncome === null  || this.buttons === null ){
+            if(this.passiveIncome === null  || this.buttons === null || this.UpgradeInfo === null){
                 this.passiveIncome = 0
                 this.buttons = [
                     {title: "Plata", imgSrc: require('../assets/chip.png'), amount: 1, quantity:0, price:10, id:0},
                     {title: "Processor", imgSrc: require('../assets/cpu.png'), amount: 2, quantity:0, price:100, id:1},
                     {title: "Screen", imgSrc: require('../assets/monitor.png'), amount: 3, quantity:0, price:150, id:2}
+                ]
+                this.UpgradeInfo = [
+                {name: "Клик", price: 1000, source: require("../assets/game0.png"), id:0, funct: this.UpgradeClick},
+                {name: "Доход", price: 500, source: require("../assets/game1.png"), id:1, funct: this.UpgradeIncome},
+                {name: "Кот", price: 300, source: require("../assets/game2.png"), id:2, funct:this.AddButton}
                 ]
                 this.SaveAll()
             }
