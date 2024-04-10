@@ -1,5 +1,5 @@
 <template>
-
+<HeaderControl/>
 <FirstScreen/>
 <SecondScreen/>
 <ThirdScreen/>
@@ -13,6 +13,7 @@ import SecondScreen from "../components/mainPage/SecondScreen.vue"
 import ThirdScreen from "../components/mainPage/ThirdScreen.vue"
 import FeedBack from '@/components/mainPage/FeedBack.vue'; 
 import FooterBlock from "../components/mainPage/FooterBlock.vue"
+import HeaderControl from '@/components/HeaderControl.vue';
 
 export default {
     components: {
@@ -20,7 +21,8 @@ export default {
         SecondScreen,
         ThirdScreen,
         FeedBack,
-        FooterBlock
+        FooterBlock,
+        HeaderControl
     }
 }
 </script>

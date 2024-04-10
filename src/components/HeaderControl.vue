@@ -9,7 +9,7 @@
             <div class="burger-line"></div>
             </div>
             <nav>
-            <router-link to = '/'>Main</router-link>
+            <router-link to = '/' >Main</router-link>
             <router-link :to = "{name: 'Product'}">Product</router-link>
             <router-link :to = "{ name: 'Game'}">Game</router-link>
             </nav>
