@@ -210,7 +210,7 @@ export default {
             this.SaveItem("passiveIncome", this.passiveIncome)     
             this.SaveItem("game-counter",this.counter)
             
-            this.SaveItem("clickIncrease",this.ClickIncrease)
+            this.SaveItem("clickIncrease",this.UpgradeInfo[0].price)
             this.SaveItem("incomeIncreasePrice",this.UpgradeInfo[1].price)
             this.SaveItem("AddButtonIncreasePrice",this.UpgradeInfo[2].price)
 
@@ -234,19 +234,22 @@ export default {
                     {title: "Processor", imgSrc: require('../assets/cpu.png'), amount: 2, quantity:0, price:100, id:1},
                     {title: "Screen", imgSrc: require('../assets/monitor.png'), amount: 3, quantity:0, price:150, id:2}
                 ]
-                this.UpgradeInfo = [
-                {name: "Клик", price: 1000, source: require("../assets/game0.png"), id:0, funct: this.UpgradeClick},
-                {name: "Доход", price: 500, source: require("../assets/game1.png"), id:1, funct: this.UpgradeIncome},
-                {name: "Кот", price: 300, source: require("../assets/game2.png"), id:2, funct:this.AddButton}
-                ]
                 this.SaveAll()
+            }
+            if (this.UpgradeInfo[0].price===null || this.UpgradeInfo[1].price===null || this.UpgradeInfo[2].price===null) {
+                this.SaveItem("clickIncrease",1000)
+                this.SaveItem("incomeIncreasePrice",500)
+                this.SaveItem("AddButtonIncreasePrice",3500)
             }
         }
 
     },
     mounted(){
-          this.SaveItem("buttons", this.buttons)
-    //      this.SaveItem("AddButtonIncreasePrice",this.UpgradeInfo[2].price)
+        this.SaveItem("buttons", this.buttons)
+    //  this.SaveItem("AddButtonIncreasePrice",this.UpgradeInfo[2].price)
+
+          
+
         
         this.LoadAll()
         console.log(this.buttons)
