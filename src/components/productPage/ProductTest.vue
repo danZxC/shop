@@ -111,6 +111,7 @@ export default {
     .bg{
         background-image: url("../../assets/product-bg.png");
         min-height:100vh;
+        height: auto;
     }
     .title{
         display: flex;
