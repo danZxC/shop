@@ -209,8 +209,8 @@ export default {
             this.SaveItem("buttons", this.buttons)
             this.SaveItem("passiveIncome", this.passiveIncome)     
             this.SaveItem("game-counter",this.counter)
-            
-            this.SaveItem("clickIncrease",this.UpgradeInfo[0].price)
+            this.SaveItem("clickIncrease",this.ClickIncrease)
+            this.SaveItem("clickIncreasePrice",this.UpgradeInfo[0].price)
             this.SaveItem("incomeIncreasePrice",this.UpgradeInfo[1].price)
             this.SaveItem("AddButtonIncreasePrice",this.UpgradeInfo[2].price)
 
