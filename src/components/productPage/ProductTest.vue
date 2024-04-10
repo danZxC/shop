@@ -67,7 +67,7 @@ export default {
 
             localStorage.setItem(this.rout,JSON.stringify(this.arr))
             alert(" элемент удален!")
-            // location.reload()
+
        },
        updateList(){
               if(!isNaN(this.product.price) && !isNaN(this.product.quantity) && this.product.name!='' && this.product.description!='' && this.product.price!='' && this.product.quantity!=''){
@@ -83,7 +83,7 @@ export default {
                 })
                 localStorage.setItem(this.rout,JSON.stringify(this.arr))
                 alert("Новый элемент зарегистрирован!")
-                // location.reload()
+                
             }
             if(isNaN(this.product.price)){alert("The price should contain only numbers")}
             if(isNaN(this.product.quantity)){alert("The quantity should contain only numbers")}
