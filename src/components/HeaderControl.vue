@@ -32,6 +32,7 @@ header{
     background-color: #29003B;
     position: fixed;
     top:0;
+    z-index: 100;
 }
 nav { 
     width: 100%;
@@ -77,7 +78,7 @@ nav a:hover{
 }
 
 @media (max-width:768px){
-
+    
     header{
         padding: 20px 0 ;
     }
@@ -88,6 +89,7 @@ nav a:hover{
         width: 50px;
     }
     nav{
+        
         flex-direction: column;
         opacity: 0;
         height: 0;
@@ -138,7 +140,7 @@ nav a:hover{
         opacity: 100;
         display: flex;
         position: absolute;
-        top:65px;
+        top:95px;
         right: 0px;
         transition: 500ms;
         
@@ -156,8 +158,19 @@ nav a:hover{
     .nav.active{
         margin-top:50px;
     }
+
+}
+@media (max-width: 600px){
+    nav.active {
+        top:80px;
+    }
 }
 
+@media (max-width: 400px){
+    nav.active {
+        top:60px;
+    }
+}
 
 </style>
 

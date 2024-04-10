@@ -1,5 +1,6 @@
 <template>
-    <div class="wrapper">
+    <div class="bg">
+        <div class="wrapper">
         <h1>Feedback</h1>
         <h2>Feel free to express your opinion!</h2>
     
@@ -9,6 +10,7 @@
             <input type="text" value="Comment" class="comment-input" v-model="comment">
             <button class="send-button" >Отправить</button>
         </form>
+    </div>
     </div>
 </template>
 
@@ -28,6 +30,13 @@ export default {
 </script>
 
 <style scoped>
+.bg{
+    
+    background-image: url(../../assets/second-screen-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 .wrapper {
     flex-direction: column;
     align-items: center;

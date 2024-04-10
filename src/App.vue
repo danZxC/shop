@@ -36,7 +36,7 @@ a{
 }
 
 h1 {
-  color: #860086;
+  color: white;
   text-transform: uppercase;
   font-size: calc(35px + 16 * (100vw / 1920));
  
@@ -49,16 +49,24 @@ h1 {
   display: flex;
   justify-content: space-between;
   width: 80%;
-  height: 80svh;
+  height: 70svh;
   margin:0 auto;
 }
 
+.bg {
+  background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
 input {
     width: 80%;
     height: 80px;
 
     color:#959595;
-    font-size: 25px;
+    font-size: calc(15px + 16 * (100vw / 1920));
+
     font-family: 'Nunito';
     font-weight: 300;
     padding-left: 40px;
@@ -87,7 +95,7 @@ button:hover{
 
 @media(max-width:768px){
   input{
-    
+    padding-left: 20px;
     width: 100%;
     -webkit-box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 0.17);
     -moz-box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 0.17);

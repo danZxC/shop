@@ -1,4 +1,5 @@
 <template>
+   <div class="bg">
     <h1>Why us?</h1>
     <div class="wrapper">
         <div class="block-row">
@@ -10,12 +11,22 @@
             <secondScreenBlock :source="require('../../assets/sec-screen4.png')" title = "Variety" :text = "text4"/>
         </div>
     </div>
+   </div>
     
 </template>
 
 <style scoped>
+.bg{
+    background: url(../../assets/second-screen-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
 .wrapper {
     flex-direction: column;
+    justify-content: space-around;
     margin: 20px auto 0 auto;
 }
 .block-row{
@@ -23,15 +34,21 @@
     justify-content: space-between;
     display: flex;
     height: 45%;
-    background-color: #fff;
+    align-items: center;
+}
+h1{
+    margin-top:60px;
 }
 @media(max-width:768px){
     .block-row {
         flex-direction: column;
-        height: 50%;
+        height: 45%;
     }
-    .wrapper{
+    .bg{
         height: 150vh;
+    }
+    .wrapper {
+        height: 80%;
     }
 
 }

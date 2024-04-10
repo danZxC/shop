@@ -36,15 +36,14 @@ export default {
 
 <style scoped>
 .button-wrapper{
-    width: 523px;
+    width: 100%;
     height: 160px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     border-radius: 20px;
-    -webkit-box-shadow: 10px 11px 33px 2px rgba(34, 60, 80, 0.38);
-    -moz-box-shadow: 10px 11px 33px 2px rgba(34, 60, 80, 0.38);
-    box-shadow: 10px 11px 33px 2px rgba(34, 60, 80, 0.38);
+    background-color: white;
+   
         
 }
 .text-wrapper{

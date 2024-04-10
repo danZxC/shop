@@ -34,6 +34,7 @@ h1{
     margin:0;
     word-wrap: break-word;
     width: 80%;
+    color:#861285;
     text-transform: none;
 }
 p{
@@ -95,5 +96,9 @@ p{
 }
 img{
     width: 50%;
+}
+
+@media (max-width: 1300px){
+
 }
 </style>
