@@ -58,7 +58,6 @@ h1 {
     background-size: cover;
     display: flex;
     flex-direction: column;
-    height: 100vh;
 }
 input {
     width: 80%;
