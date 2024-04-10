@@ -1,17 +1,17 @@
 
 
 <template>
-<MainPage/>
+<HeaderControl/>
 
 </template>
 
 
 <script>
-import MainPage from './views/MainPage.vue';
+import HeaderControl from './components/HeaderControl.vue'
 
 export default {
 components:{
-  MainPage
+  HeaderControl
 }
 }
 </script>
