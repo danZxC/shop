@@ -89,7 +89,9 @@ nav a:hover{
         width: 50px;
     }
     nav{
-        
+        position: absolute;
+        left:0;
+        top:0;
         flex-direction: column;
         opacity: 0;
         height: 0;
@@ -97,6 +99,7 @@ nav a:hover{
         margin: 0;
     }
     nav a {
+        position: static;
         padding: 0;
         display: flex;
         height: 36%;
@@ -140,7 +143,7 @@ nav a:hover{
         opacity: 100;
         display: flex;
         position: absolute;
-        top:95px;
+        top:115px;
         right: 0px;
         transition: 500ms;
         
