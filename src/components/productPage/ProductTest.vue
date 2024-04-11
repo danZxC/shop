@@ -82,6 +82,10 @@ export default {
                     
                 })
                 localStorage.setItem(this.rout,JSON.stringify(this.arr))
+                this.arr = JSON.parse(localStorage.getItem(this.rout))
+                if(this.arr === null){
+                    this.arr = []
+                }
                 alert("Новый элемент зарегистрирован!")
                 
             }
