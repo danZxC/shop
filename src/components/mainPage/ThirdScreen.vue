@@ -85,6 +85,9 @@ h1{
 }
 
 @media (max-width:768px){
+    .bg {
+        height: 100vh;  
+    }
     .column {
         width: 100%;
     }

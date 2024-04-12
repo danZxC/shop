@@ -544,6 +544,9 @@ li.hovering p{
  .button-wrapper {
     margin:0px;
  }
+ .assend,.button-show{
+    height: 40px;
+ }
 }
 @media (max-width:500px){
  .main-image{
