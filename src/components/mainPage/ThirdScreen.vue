@@ -32,6 +32,7 @@ export default {
 <style scoped>
 .bg {
     background-image: url(../../assets/third-screen-bg.png);
+    height: 100vh;  
 }
 .wrapper{
     margin:40px auto 0 auto;
@@ -85,9 +86,6 @@ h1{
 }
 
 @media (max-width:768px){
-    .bg {
-        height: 100vh;  
-    }
     .column {
         width: 100%;
     }

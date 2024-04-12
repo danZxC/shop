@@ -1,9 +1,6 @@
 <template>
-    <div class="margin">
-        
+   
         <ThirdScreen/>
-    
-    </div>
 </template>
 
 <script>
@@ -17,8 +14,3 @@ export default {
 
 </script>
 
-<style scoped>
-.margin {
-    margin-bottom: 160px;
-}
-</style>    

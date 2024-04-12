@@ -1,7 +1,5 @@
 <template>
 <div class="bg">
-    
-
     <div class="title"> 
         <router-link class="back control" :to = "{name: 'Product'}">🠔</router-link>
         <RouterView/>
@@ -112,6 +110,7 @@ export default {
 
 
 <style scoped>
+
     .bg{
         background-image: url("../../assets/product-bg.png");
         min-height:100vh;
@@ -252,4 +251,9 @@ export default {
 
    }
 
+</style>
+<style>
+.margin{
+    margin-bottom:0;
+}
 </style>
