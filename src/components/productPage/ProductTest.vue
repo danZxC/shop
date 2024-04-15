@@ -1,7 +1,7 @@
 <template>
 <div class="bg">
     <div class="title"> 
-        <router-link class="back control" :to = "{name: 'Product'}">🠔</router-link>
+        <router-link class="back control" :to = "{name: 'Product'}">←</router-link>
         <RouterView/>
         <h1>{{ rout }}</h1>
         <button class="show-button control" @click="ToggleForm">+</button>
