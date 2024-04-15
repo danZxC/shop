@@ -313,7 +313,7 @@ h2{
     border-radius: 10px;
     text-align: center;
     font-weight: 900;
-    font-size: calc(15px + 16 * (100vw / 1920));
+    font-size: calc(10px + 16 * (100vw / 1920));
     font-weight: 300;
     letter-spacing: 10px;
     font-family: 'Nunito', sans-serif;
