@@ -64,9 +64,9 @@ export default {
                 {title: "Plata", imgSrc: require('../assets/chip.png'), amount: 1, quantity:0, price:10, id:1, show:true},
                 {title: "Processor", imgSrc: require('../assets/cpu.png'), amount: 2, quantity:0, price:100, id:2, show:true},
                 {title: "Screen", imgSrc: require('../assets/monitor.png'), amount: 3, quantity:0, price:150, id:3, show:true},
-                {title: "PC", imgSrc: require('../assets/chip.png'), amount: 1, quantity:0, price:10, id:4, show:true},
-                {title: "Laptop", imgSrc: require('../assets/cpu.png'), amount: 2, quantity:0, price:100, id:5, show:true},
-                {title: "Server", imgSrc: require('../assets/monitor.png'), amount: 3, quantity:0, price:150, id:6, show:true},
+                {title: "Laptop", imgSrc: require('../assets/laptop.png'), amount: 4, quantity:0, price:300, id:4, show:true},
+                {title: "PC", imgSrc: require('../assets/gaming-pc.png'), amount: 6, quantity:0, price:400, id:5, show:true},
+                {title: "Server", imgSrc: require('../assets/server-storage.png'), amount: 8, quantity:0, price:500, id:6, show:true},
             ],
             buttonsAdd:localStorage.getItem("buttonsAdd"),
             counter: 0,
@@ -379,7 +379,7 @@ h2{
     border-radius:50px;
     height: 0vh;
     opacity: 0;
-    z-index:5;
+    z-index:50;
     position: fixed;
     top: 100px;
     left:0;
